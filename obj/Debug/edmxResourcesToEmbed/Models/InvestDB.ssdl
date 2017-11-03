@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="iinvestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure">
+  <EntityType Name="Portfolio">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Nullable="false" MaxLength="50" Type="nvarchar" />
+    <Property Name="price" Type="float" />
+    <Property Name="quanity" Type="float" />
+    <Property Name="ticker" MaxLength="50" Type="nvarchar" />
+    <Property Name="risk" MaxLength="50" Type="nvarchar" />
+    <Property Name="PEratio" Type="float" />
+    <Property Name="Id" MaxLength="128" Type="nvarchar" />
+  </EntityType>
+  <EntityType Name="StockProducts">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Nullable="false" MaxLength="50" Type="nvarchar" />
+    <Property Name="price" Type="float" />
+    <Property Name="quantity" Type="float" />
+    <Property Name="ticker" MaxLength="50" Type="nvarchar" />
+    <Property Name="risk" MaxLength="50" Type="nvarchar" />
+    <Property Name="PEratio" Type="float" />
+    <Property Name="value" MaxLength="50" Type="nvarchar" />
+    <Property Name="value2" MaxLength="50" Type="nchar" />
+  </EntityType>
+  <EntityContainer Name="iinvestModelStoreContainer">
+    <EntitySet Name="Portfolio" EntityType="Self.Portfolio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StockProducts" EntityType="Self.StockProducts" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

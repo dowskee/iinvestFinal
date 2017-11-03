@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Watson";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ask Watson</h2>
+<div id="ibm_chat_root"></div>
+
+
+<script src='https://goo.gl/LGQjtn'></script>
+<script>
+    var config = {
+        el: 'ibm_chat_root',
+        baseURL: 'https://api.ibm.com/virtualagent/run/api/v1',
+        botID: '2b07aecc-d9a2-42e5-884b-59dff73ced6b',
+        XIBMClientID: 'c05d05dc-25ab-4cad-a5bc-aded4fa9c256',
+        XIBMClientSecret: 'H1sC0iF5jB7rM2hM3eS0jA0uO6vO3fL0iL8bQ8xK3jF4gF2gV3'
+
+
+    };
+    window.IBMChat.init(config);
+</script>
+
+
+
+
+

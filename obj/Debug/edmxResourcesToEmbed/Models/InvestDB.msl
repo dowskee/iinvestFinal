@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="iinvestModelStoreContainer" CdmEntityContainer="iinvestEntities">
+    <EntitySetMapping Name="Portfolios">
+      <EntityTypeMapping TypeName="iinvestModel.Portfolio">
+        <MappingFragment StoreEntitySet="Portfolio">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="quanity" ColumnName="quanity" />
+          <ScalarProperty Name="ticker" ColumnName="ticker" />
+          <ScalarProperty Name="risk" ColumnName="risk" />
+          <ScalarProperty Name="PEratio" ColumnName="PEratio" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockProducts">
+      <EntityTypeMapping TypeName="iinvestModel.StockProduct">
+        <MappingFragment StoreEntitySet="StockProducts">
+          <ScalarProperty Name="value2" ColumnName="value2" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="ticker" ColumnName="ticker" />
+          <ScalarProperty Name="risk" ColumnName="risk" />
+          <ScalarProperty Name="PEratio" ColumnName="PEratio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

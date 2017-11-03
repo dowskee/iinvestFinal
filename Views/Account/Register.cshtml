@@ -1,0 +1,75 @@
+﻿@model iinvest.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Create Account";
+}
+<br/>
+<br/>
+<br />
+<img src="~/Content/images/iinvestbar1.jpg" style="width:100%;height:70%"/>
+<br />
+
+
+<a href="https://www.facebook.com/about/login/">
+    <style>
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+        <img src="/Content/images/facebook.jpg" alt="Main" style="width:20%;height:20%">
+</a>
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Register" />
+        </div>
+    </div>
+    
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<div id="ibm_chat_root"></div>
+<script src='https://goo.gl/LGQjtn'></script>
+<script>
+    var config = {
+        el: 'ibm_chat_root',
+        baseURL: 'https://api.ibm.com/virtualagent/run/api/v1',
+        botID: '2b07aecc-d9a2-42e5-884b-59dff73ced6b',
+        XIBMClientID: 'c05d05dc-25ab-4cad-a5bc-aded4fa9c256',
+        XIBMClientSecret: 'H1sC0iF5jB7rM2hM3eS0jA0uO6vO3fL0iL8bQ8xK3jF4gF2gV3'
+
+
+    };
+    window.IBMChat.init(config);
+</script>
+
+<div>
+<script src="http://widgets.macroaxis.com/widgets/url.jsp?t=42" type="text/javascript"></script>
+</div>

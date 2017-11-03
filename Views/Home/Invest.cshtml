@@ -1,0 +1,116 @@
+﻿
+<br/>
+<br/>
+<br/>
+<img src="~/Content/images/iinvestbar2.jpg" style="width:100%;height:70%" />
+<br/>
+<br/>
+        <form class="form-horizontal" action="/Home/Analyze" method="post">
+            <div class="form-group">
+                Desired Growth: <select name="Growth">
+                    <option value="Conservative">Conservative</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="Aggresive">Aggresive</option>
+                </select><br />
+                <br />
+                Which Industry Do you See Most Growth Potential: <select name="Values1">
+                    <option value="Social">Social Media</option>
+                    <option value="ECommerce">E-Commerce</option>
+                    <option value="Retail">Retail Brands</option>
+                    <option value="Tech">Technology</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Clean">Clean Enegery</option>
+                </select><br/>
+                <br />
+
+                Which Industry Do you spend Most Money In: <select name="Values2">
+                    <option value="Social">Social Media</option>
+                    <option value="ECommerce">E-Commerce</option>
+                    <option value="Retail">Retail Brands</option>
+                    <option value="Tech">Technology</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Clean">Clean Enegery</option>
+                </select><br />
+                <br />
+                Causes You Care About : 
+                <select name="causes">
+                    <option value="ClimateChange">Climate Change</option>
+                    <option Vlaue="Public">The Enviorment</option>
+                    <option value="ChildPovery">Child Poverty</option>
+                    <option value="Women">Women's Rights</option>
+                    <option Vlaue="LGBTQ">LGBTQ Rights</option>
+                    <option Vlaue="Public">Public Education</option>
+                </select><br />
+                <br />
+
+                  Causes You Care About :
+                   <select name="causes2">
+                   <option value="ClimateChange">Climate Change</option>
+                   <option Vlaue="Public">The Enviorment</option>
+                   <option value="ChildPovery">Child Poverty</option>
+                   <option value="Women">Women's Rights</option>
+                   <option Vlaue="LGBTQ">LGBTQ Rights</option>
+                   <option Vlaue="Public">Public Education</option>
+                 </select><br />
+                  <br />
+
+
+
+                Risk Level: <select name="Risks">
+                    <option value="Low">Low Risk</option>
+                    <option value="Medium">Moderate Risk</option>
+                    <option value="High">High Risk</option>
+                </select><br />
+                <br />
+
+
+                <input type="submit" class="btn btn-primary btn-lg"    value="Analyze" &raquo; />
+            </div>
+</form>
+<div>
+<script src="http://widgets.macroaxis.com/widgets/url.jsp?t=42" type="text/javascript"></script></div>
+
+<html>
+<head>
+    <title>IBM Watson Virtual Agent Chat Widget Sample</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <style>
+        html, body, iframe {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        #ibm_chat_root {
+            position: fixed;
+            bottom: 0;
+            right: 30px;
+            min-height: 80px;
+            width: 300px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="ibm_chat_root"></div>
+    <script src='https://goo.gl/LGQjtn'></script>
+    <script>
+        var config = {
+            el: 'ibm_chat_root',
+            baseURL: 'https://api.ibm.com/virtualagent/run/api/v1',
+            botID: '2b07aecc-d9a2-42e5-884b-59dff73ced6b',
+            XIBMClientID: 'c05d05dc-25ab-4cad-a5bc-aded4fa9c256',
+            XIBMClientSecret: 'H1sC0iF5jB7rM2hM3eS0jA0uO6vO3fL0iL8bQ8xK3jF4gF2gV3'
+
+        };
+        window.IBMChat.init(config);
+    </script>
+</body>
+</html>
+
+
+
+
+

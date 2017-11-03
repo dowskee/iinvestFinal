@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br/>
+<br/>
+<img src="~/Content/images/iinveststrategy2.jpg" style="width:90%;height:20%" />
+
+<h3>Your Toal Investment today is $@ViewBag.gtotal</h3>
+<br/>
+<h4>Credit Card Information</h4>
+<form action="/Home/PaymentMade" method="post">
+    Name: <input type="text" name="UserName" /><br />
+    <br />
+    Address: <input type="text" name="Address" /><br />
+    <br />
+    City:<input type="text" name="City" /><br />
+    <br />
+    State:<input type="text" name="State" /><br />
+    <br />
+    Zip Code:<input type="text" name="Zip" /><br />
+    <br />
+    Credit Card: <select name="Type">
+        <option value="Visa">Visa</option>
+        <option value="MasterCard">MasterCard</option>
+        <option value="AmericanExpress">Amex</option>
+    </select>
+    <br />
+    Card Number:<input type="text" name="Cardnumber" /><br />
+    <br />
+    Experation Date:<input type="text" name="Cardnumber" /><br />
+    <br />
+    CVV(3 Digits):<input type="text" name="Cardnumber" /><br />
+    <br />
+    <input type="submit" value="Complete Trade" />
+</form>
+Checkout With <img src="~/Content/images/paypal.jpg" style="width:20%;height:10%" />
+<html>
+<head>
+    <title>IBM Watson Virtual Agent Chat Widget Sample</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <style>
+        html, body, iframe {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        #ibm_chat_root {
+            position: fixed;
+            bottom: 0;
+            right: 30px;
+            min-height: 80px;
+            width: 300px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="ibm_chat_root"></div>
+    <script src='https://goo.gl/LGQjtn'></script>
+    <script>
+        var config = {
+            el: 'ibm_chat_root',
+            baseURL: 'https://api.ibm.com/virtualagent/run/api/v1',
+            botID: '2b07aecc-d9a2-42e5-884b-59dff73ced6b',
+            XIBMClientID: 'c05d05dc-25ab-4cad-a5bc-aded4fa9c256',
+            XIBMClientSecret: 'H1sC0iF5jB7rM2hM3eS0jA0uO6vO3fL0iL8bQ8xK3jF4gF2gV3'
+
+        };
+        window.IBMChat.init(config);
+    </script>
+</body>
+</html>
+
+
